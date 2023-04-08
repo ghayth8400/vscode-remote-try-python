@@ -1,0 +1,10 @@
+import datetime
+
+def write_diary():
+    date = datetime.datetime.now()
+    content = input("Write your diary entry: ")
+    with open("diary.txt", "a") as file:
+        file.write(f"{date}\n{content}\n")
+
+if __name__ == "__main__":
+    write_diary()
